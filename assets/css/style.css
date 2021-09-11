@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root{
+  --color-blue: hsl(225, 100%, 94%);
+  --color-buttom:  hsl(245, 75%, 52%);
+  --color-blue-light: hsl(225, 100%, 98%);
+  --color-white: hsl(225, 100%, 100%);
+  --color-text: hsl(224, 23%, 55%);
+  --color-title:  hsl(223, 47%, 23%);  
+  --color-shadow-plan:  hsla(223, 47%, 23%, 0.2);  
+  --color-shadow-button:  hsla(223, 47%, 23%, 0.6);  
+  --paragrapf-size: 16px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;       
+}
+input:focus{
+    outline: none;
+}
+
+body{
+    width: 100%;
+    background:   url('../images/pattern-background-desktop.svg') no-repeat;
+    background-color: var(--color-blue);
+    background-size: cover;
+    background-position: center -200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    font-family: 'Red Hat Display', sans-serif;       
+}
+
+.card{
+    margin-top: 50px;
+    width: 375px;
+    height: auto;
+    background-color: var(--color-white);
+    border-radius: 10px;
+}
+.card__img{
+    max-width: 375px;
+}
+.card__img img{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+.card__body{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card__body h1{
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--color-title);
+    margin-bottom: 20px;
+}
+.card__body p{
+    font-size: 16px;
+    color: var(--color-text);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card__plan{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    background-color: var(--color-blue-light);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px var(--color-shadow-plan);
+}
+.card__plan img{
+    margin-right: 20px;
+}
+.card_plan_content{
+    display: flex;
+    align-items: center;    
+}
+.card__plan_info{
+    display: flex;
+    flex-direction: column; 
+    font-size: 14px;      
+}
+.card__plan_info span{
+    color: var(--color-text);
+}
+.card__plan_info span:first-child{
+    color: var(--color-title);
+    font-weight: 900;    
+}
+.card__plan a{    
+    font-size: 14px;
+    color: var(--color-text);
+    font-weight: 700;
+}
+.card__plan a:hover, 
+.card__plan a:focus{
+    color: var(--color-buttom);
+}
+.card__body_button{
+    width: 100%;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-blue-light);
+    border: 2px solid transparent;
+    border-radius: 6px;    
+    background-color: var(--color-buttom);
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all .4s ease;
+    box-shadow: 0px 0px 10px var(--color-shadow-button);
+}
+.card__body_button:hover,
+.card__body_button:focus{
+    color: var(--color-buttom);
+    background-color: var(--color-blue);    
+}
+.card__body_cancel{
+    text-decoration: none;
+    color: var(--color-text);
+    transition: all .4s ease;
+    font-weight: 700;
+}
+.card__body_cancel:hover,
+.card__body_cancel:focus{
+    color: var(--color-buttom);
+}
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+@media all and (max-width: 375px){
+    body{
+        background:   url('../images/pattern-background-mobile.svg') no-repeat;
+        background-color: var(--color-blue);       
+    }
+    .card{
+        width: 360px;        
+    }
+}
+@media all and (max-width: 360px){
+    body{
+        background:   url('../images/pattern-background-mobile.svg') no-repeat;
+        background-color: var(--color-blue);       
+    }
+    .card{
+        width: 340px; 
+        margin-top: 10px;       
+    }
+}
+@media all and (max-width: 320px){
+    body{
+        background:   url('../images/pattern-background-mobile.svg') no-repeat;
+        background-color: var(--color-blue);       
+    }
+    .card{
+        width: 300px; 
+        margin-top: 10px;       
+    }
+}
+@media all and (max-width: 280px){
+    body{
+        background:   url('../images/pattern-background-mobile.svg') no-repeat;
+        background-color: var(--color-blue);       
+    }
+
+    .card{
+        width: 260px; 
+        margin-top: 10px;       
+    }
+    .card__body{        
+        padding: 10px;
+    }
+}
